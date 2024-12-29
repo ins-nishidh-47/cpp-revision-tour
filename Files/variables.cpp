@@ -3,6 +3,7 @@
 //decltype() to make copy of variable, used to get the datatype of the variable
 #include <iostream>
 #include <cstdint>  // For fixed-width integers
+#include <string> // For wchar_t for fixed wide characters
 
 using namespace std;
 
@@ -37,6 +38,7 @@ int datatypes(){
 int prescised_size(){
     //variable precision size limit the size of the variable
     //int precision
+    //numbers
     int a = 5;
     cout << "The size of int is: " << sizeof(a) << endl;
 
@@ -47,6 +49,24 @@ int prescised_size(){
     cout << "Size of int8_t a: " << sizeof(r) << " bytes" << endl;   // Size: 1 byte
     cout << "Size of int16_t b: " << sizeof(b) << " bytes" << endl;  // Size: 2 bytes
     cout << "Size of uint32_t c: " << sizeof(c) << " bytes" << endl; // Size: 4 bytes
+
+    //chars and strings
+    wchar_t d = L'a'; // Wide character
+    wstring e = L"Hello"; // Wide string
+
+    cout << "Size of wchar_t d: " << sizeof(d) << " bytes" << endl; // Size: 4 bytes
+    cout << "Size of wchar_t e: " << sizeof(e) << " bytes" << endl; // Size: 32 bytes
+
+    //fixed size char and string
+    char16_t f = u'A'; // 16-bit Unicode character
+    char32_t g = U'A'; // 32-bit Unicode character
+    u16string h = u"Hellofdfdsfsdfsdffsdfsdfsdfsdfsdfsdfsdf"; // UTF-16 string
+    u32string i = U"Hello"; // UTF-32 string
+
+    cout << "Size of char16_t f: " << sizeof(f) << " bytes" << endl; // Size: 2 bytes
+    cout << "Size of char32_t g: " << sizeof(g) << " bytes" << endl; // Size: 4 bytes
+    cout << "Size of u16string h: " << sizeof(h) << " bytes" << endl; // Size: 32 bytes
+    cout << "Size of u32string i: " << sizeof(i) << " bytes" << endl; // Size: 32 bytes
 
 
     
