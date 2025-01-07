@@ -15,10 +15,6 @@ return: This keyword is used to end a function and, if desired, to provide the c
 
 signed: It is used to declare variables using signed integers.
 
-switch: It is used to construct a switch statement, which compares an expression to its value and chooses a code block accordingly.
-
-typedef: The typedef keyword is used to give a data type an alias (alternative name).
-
 union: It is used to define a union, which resembles a struct but has one shared memory location for all its members.
 
 Unsigned: The unsigned keyword is used to define unsigned integer variables.
@@ -305,9 +301,48 @@ int pro(Student p)
     return 1;
 }
 
+// switch: It is used to construct a switch statement, which compares an expression to its value and chooses a code block accordingly.
+
+int switch_key()
+{
+    int day = 3;
+
+    switch (day)
+    {
+    case 1:
+        std::cout << "Monday\n";
+        break;
+    case 2:
+        std::cout << "Tuesday\n";
+        break;
+    case 3:
+        std::cout << "Wednesday\n";
+        break;
+    case 4:
+        std::cout << "Thursday\n";
+        break;
+    case 5:
+        std::cout << "Friday\n";
+        break;
+    default:
+        std::cout << "Invalid day\n";
+        break;
+    }
+
+    return 0;
+}
+
+// typedef: The typedef keyword is used to give a data type an alias (alternative name).
+// using uint = unsigned int;  // Equivalent to 'typedef unsigned int uint;'
+// using IntPtr = int*;         // Equivalent to 'typedef int* IntPtr;'
+typedef struct
+{
+    int x, y;
+} Point; // Create an alias 'Point' for the structure
+
 int main()
 {
-    Student p = {"alice",90};
+    Student p = {"alice", 90};
     pro(p);
     return 0;
 };
